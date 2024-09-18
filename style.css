@@ -388,4 +388,14 @@ header {
         margin-top: 26px;
         height: 94px;
     }
+
+    #about .about-item h3 {
+        font-size: 1.25rem;
+        margin-bottom: 25px;
+    }
+
+    #location .location-item h3 {
+        font-size: 1.25rem;
+        margin-bottom: 25px;
+    }
 }
