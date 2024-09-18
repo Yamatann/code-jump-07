@@ -1,0 +1,391 @@
+@charset "UTF-8";
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html
+    {
+        scroll-behavior: smooth;
+    }
+
+
+body {
+    font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.wrapper {
+    max-width: 1000px;
+    padding: 90px 16px 150px 16px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/** ヘッダー **/
+
+header {
+    background-image:url("img/mainvisual.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+#header img {
+    max-width: 100%;
+}
+
+#header nav {
+    color: white;
+}
+
+#header ul {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 20px;
+}
+
+#header li {
+    list-style: none;
+    margin-right: 20px;
+}
+
+#header .header-menu {
+    text-decoration: none;
+    color: white;
+    filter:drop-shadow(1px 1px 2px #121212);
+    font-weight: bold;
+}
+
+#header .header-menu:hover {
+    transition: 0.5s; /* マウスカーソルを載せるとき */
+    opacity: 0.8;
+    color: red;
+}
+
+#header .site-title {
+    right: 0;
+    position: absolute;
+    /* max-width: 100%; */
+    padding: 0 16px;
+    top: 45%;
+    left: 0;
+    /* transform: translate(-50%, -50%); */
+    filter: drop-shadow(1px 1px 10px #c0c0c0);
+    text-align: center;
+}
+
+/** メイン #menu main-item **/
+
+#menu .menu-img {
+    background-image:url("img/menu.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    background-attachment: fixed;
+    margin-top: 20px;
+    height: 300px;
+}
+
+#menu .site-title {
+    right: 0;
+    position: absolute;
+    padding: 0 16px;
+    top: 30%;
+    left: 0;
+    filter: drop-shadow(1px 1px 10px #c0c0c0);
+    text-align: center;
+    color: white;
+    font-size: 4.5rem;
+}
+
+#menu .menu-content {
+    display: flex;
+}
+
+#menu .menu-item {
+    width: 50%;
+    padding: 0 20px;
+}
+
+#menu .menu-item:first-child{
+    border-right: solid 1px black;
+}
+
+#menu .menu-item h3 {
+    font-size: 2.5rem;
+    display: inline-block;
+    margin-bottom: 50px;
+    border-bottom: solid 6px red;
+}
+
+#menu .menu-list {
+    display: flex;
+}
+
+#menu .menu-list dt{
+    width: 87%;
+    text-align: left;
+    border-bottom: dotted 1px black;
+    margin-bottom: 25px;
+}
+
+#menu .menu-list dd {
+    width: 13%;
+    padding-top: 8px;
+    text-align: right;
+}
+
+/** メイン #menu menu-food **/
+
+#menu .menu-food {
+    margin-bottom: 55px;
+}
+
+/** メイン #about **/
+
+#about .about-img {
+    background-image:url("img/about.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    background-attachment: fixed;
+    margin-top: 20px;
+    height: 300px;
+}
+
+#about .site-title {
+    right: 0;
+    position: absolute;
+    padding: 0 16px;
+    top: 30%;
+    left: 0;
+    filter: drop-shadow(1px 1px 10px #c0c0c0);
+    text-align: center;
+    color: white;
+    font-size: 4.5rem;
+}
+
+#about .about-item h3 {
+    font-size: 2.5rem;
+    display: inline-block;
+    margin-bottom: 50px;
+    border-bottom: solid 6px red;
+    text-align: center;
+}
+
+#about  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#about  li {
+    width: 48%;
+    margin-bottom: 50px;
+    list-style: none;
+    text-align: left;
+}
+
+
+#about .readMore a {
+    position: relative;    /* 相対指定 */
+    display: inline-block;
+    font-size: 0.875rem;   /* フォントサイズ */
+    padding: 18px 45px;    /* 内側の余白 */
+    color: #000;           /* 文字色 */
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+  /* ::beforeと::after疑似要素に共通するスタイル */
+#about .readMore a::before,
+#about .readMore a::after {
+    border: 2px solid #E03131;
+    position: absolute;               /* 絶対指定 */
+    content: "";                      /* コンテンツの内容を空に */
+    transition: all 0.3s ease-in-out; /* 徐々に加速 */
+    box-sizing: border-box;
+}
+
+  /* ::before疑似要素のスタイル「左上括弧」 */
+#about .readMore a::before {
+    border-width: 2px 0 0 2px; /* 上と左の境界線のみ表示 */
+    top: 0;                    /* 要素の上端からの位置 */
+    left: 0;                   /* 要素の左端からの位置 */
+    width: 30px;               /* 幅を30pxに設定 */
+    height: 25px;              /* 高さを25pxに設定 */
+}
+
+  /* ::after疑似要素のスタイル「右下括弧」 */
+#about .readMore a::after {
+    border-width: 0 2px 2px 0; /* 下と右の境界線のみ表示 */
+    bottom: 0;                 /* 要素の下端からの位置 */
+    right: 0;                  /* 要素の右端からの位置 */
+    width: 30px;               /* 幅を30pxに設定 */
+    height: 25px;              /* 高さを25pxに設定 */
+}
+
+  /* ホバー時の::beforeと::after疑似要素のスタイル */
+#about .readMore a:hover::before,
+#about .readMore a:hover::after {
+    width: 100%;               /* 幅を要素全体に拡大 */
+    height: 100%;              /* 高さを要素全体に拡大 */
+}
+
+/** メイン #location **/
+
+#location .location-img {
+    background-image:url("img/location.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    background-attachment: fixed;
+    margin-top: 20px;
+    height: 300px;
+}
+
+#location .site-title {
+    right: 0;
+    position: absolute;
+    padding: 0 16px;
+    top: 30%;
+    left: 0;
+    filter: drop-shadow(1px 1px 10px #c0c0c0);
+    text-align: center;
+    color: white;
+    font-size: 4.5rem;
+}
+
+#location .location-content h3 {
+    font-size: 2.5rem;
+    display: inline-block;
+    margin-bottom: 50px;
+    border-bottom: solid 6px red;
+    text-align: center;
+}
+
+#location .location-navi iframe{
+    width: 100%;
+    margin-bottom: 20px;
+    filter: grayscale(1);
+}
+
+#location .storeinfo {
+    text-align: left;
+}
+
+#location .storeinfo p {
+    margin-bottom: 10px;
+}
+
+/** フッター #footer  **/
+
+#footer {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.5rem;
+}
+
+@media screen and (max-width: 767px) {
+    #header .site-title {
+        top: 42%;
+    }
+
+    #menu .site-title {
+        top: 26%;
+        font-size: 2rem;
+    }
+
+    #menu .menu-img {
+        background-image:url("img/menu.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        position: relative;
+        background-attachment: scroll;
+        margin-top: 26px;
+        height: 94px;
+    }
+
+    #menu .menu-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #menu .menu-item {
+        width: 100%;
+        padding: 0;
+    }
+
+    #menu .menu-item:first-child{
+        border-right: none;
+    }
+
+    .wrapper {
+        padding: 30px 16px 60px 16px;
+    }
+
+    #menu .menu-item h3{
+        font-size:1.25rem;
+        margin-bottom: 25px;
+    }
+
+    #about  ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #about  li {
+        width: 100%;
+        margin-bottom: 50px;
+        list-style: none;
+    }
+
+    #about .site-title {
+        top: 26%;
+        font-size: 2rem;
+    }
+
+    #about .about-img {
+        background-image:url("img/about.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        position: relative;
+        background-attachment: scroll;
+        margin-top: 26px;
+        height: 94px;
+    }
+
+    #location .site-title {
+        top: 26%;
+        font-size: 2rem;
+    }
+
+    #location .location-img {
+        background-image:url("img/location.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        position: relative;
+        background-attachment: scroll;
+        margin-top: 26px;
+        height: 94px;
+    }
+}
